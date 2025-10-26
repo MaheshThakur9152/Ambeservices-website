@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import { Mail, Building2, Phone, Send } from 'lucide-react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 interface FormData {
   fullName: string;
@@ -101,6 +103,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <Header />
       {/* Hero Section */}
       <section className="relative min-h-[500px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/header.jpg')" }}>
         <div className="absolute inset-0 bg-black/60"></div>
@@ -259,7 +262,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-full transition-colors flex items-center justify-center space-x-2 disabled:opacity-50"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-full transition-colors flex items-center justify-center space-x-2 disabled:opacity-50"
                 >
                   <Send size={18} />
                   <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
@@ -274,7 +277,7 @@ const Contact = () => {
             </div>
 
             {/* Contact Info Card */}
-            <div className="bg-orange-500 text-white p-8 rounded-xl shadow-lg">
+            <div className="bg-blue-600 text-white p-8 rounded-xl shadow-lg">
               <h3 className="text-3xl font-bold mb-8">Connect with us today</h3>
 
               <div className="space-y-6">
@@ -282,7 +285,7 @@ const Contact = () => {
                   <Mail size={24} className="mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-lg mb-1">Business Inquiries</h4>
-                    <p className="text-orange-100">contact@ambeservice.com</p>
+                    <p className="text-blue-100">contact@ambeservice.com</p>
                   </div>
                 </div>
 
@@ -290,7 +293,7 @@ const Contact = () => {
                   <Building2 size={24} className="mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-lg mb-1">Office Address</h4>
-                    <p className="text-orange-100 leading-relaxed">
+                    <p className="text-blue-100 leading-relaxed">
                       Shop No. 49A, Ground Floor,<br />
                       Pooja Enclave CHS Ltd,<br />
                       Ganesh Nagar, Kandivali West,<br />
@@ -303,7 +306,7 @@ const Contact = () => {
                   <Phone size={24} className="mt-1 flex-shrink-0" />
                   <div>
                     <h4 className="font-semibold text-lg mb-1">Phone</h4>
-                    <p className="text-orange-100">
+                    <p className="text-blue-100">
                       +91 9619607537<br />
                       +91 7977018742<br />
                       022 4506 6566
@@ -315,6 +318,23 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Google Maps Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Find Us</h2>
+          <div className="w-full">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.123!2d72.837!3d19.207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDEyJzI1LjIiTiA3MsKwNTAnMTMuMiJF!5e0!3m2!1sen!2sin!4v1234567890"
+              className="w-full h-96 rounded-lg shadow-md"
+              allowFullScreen
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 };
