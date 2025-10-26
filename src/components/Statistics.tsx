@@ -15,13 +15,36 @@ export default function Statistics() {
       <div className="max-w-[1400px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-[45%_55%] gap-12 lg:gap-16 items-center">
           
-          {/* Left: Text Content - Reduced Size */}
+          {/* Right: Video - Larger (First on mobile) */}
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="relative w-full order-1 lg:order-2"
+          >
+            <div className="h-48 sm:h-64 md:h-80 lg:aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl bg-black">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+                poster="/hero-1.jpg"
+              >
+                <source src="/ambe-service-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </motion.div>
+          
+          {/* Left: Text Content - Reduced Size (Second on mobile) */}
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="space-y-5"
+            className="space-y-5 order-2 lg:order-1"
           >
             {/* Heading - Smaller */}
             <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
@@ -50,28 +73,6 @@ export default function Statistics() {
                   <div className="text-xs md:text-sm text-gray-900 font-medium">{stat.label}</div>
                 </motion.div>
               ))}
-            </div>
-          </motion.div>
-          
-          {/* Right: Video - Larger */}
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative w-full h-full"
-          >
-            <div className="aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl bg-black">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              >
-                <source src="/ambe-service-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
             </div>
           </motion.div>
           

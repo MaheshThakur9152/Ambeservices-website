@@ -71,12 +71,12 @@ const Header = () => {
             >
               Testimonials
             </button>
-            <button
-              onClick={() => scrollToSection('contact')}
+            <Link
+              href="/contact"
               className="font-sans text-base font-medium text-gray-700 hover:text-blue-600 transition-colors"
             >
               Contact
-            </button>
+            </Link>
           </nav>
 
           {/* WhatsApp Button */}
@@ -141,12 +141,13 @@ const Header = () => {
               >
                 Testimonials
               </button>
-              <button
-                onClick={() => scrollToSection('contact')}
+              <Link
+                href="/contact"
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 w-full text-left"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Contact
-              </button>
+              </Link>
               <a
                 href="https://api.whatsapp.com/send/?phone=919619607537&text&type=phone_number&app_absent=0"
                 target="_blank"

@@ -120,10 +120,10 @@ const Contact = () => {
       {/* Contact Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Form */}
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <div className="bg-white p-4 sm:p-8 rounded-xl shadow-lg order-1">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                 Fill out the form below to get started
               </h2>
 
@@ -277,23 +277,23 @@ const Contact = () => {
             </div>
 
             {/* Contact Info Card */}
-            <div className="bg-blue-600 text-white p-8 rounded-xl shadow-lg">
-              <h3 className="text-3xl font-bold mb-8">Connect with us today</h3>
+            <div className="bg-blue-600 text-white p-4 sm:p-8 rounded-xl shadow-lg max-w-md mx-auto lg:max-w-none order-2 lg:order-2">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Connect with us today</h3>
 
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Mail size={24} className="mt-1 flex-shrink-0" />
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <Mail size={20} className="mt-1 flex-shrink-0 sm:w-6 sm:h-6" />
                   <div>
-                    <h4 className="font-semibold text-lg mb-1">Business Inquiries</h4>
-                    <p className="text-blue-100">contact@ambeservice.com</p>
+                    <h4 className="font-semibold text-base sm:text-lg mb-1">Business Inquiries</h4>
+                    <p className="text-blue-100 text-sm sm:text-base">contact@ambeservice.com</p>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <Building2 size={24} className="mt-1 flex-shrink-0" />
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <Building2 size={20} className="mt-1 flex-shrink-0 sm:w-6 sm:h-6" />
                   <div>
-                    <h4 className="font-semibold text-lg mb-1">Office Address</h4>
-                    <p className="text-blue-100 leading-relaxed">
+                    <h4 className="font-semibold text-base sm:text-lg mb-1">Office Address</h4>
+                    <p className="text-blue-100 leading-relaxed text-sm sm:text-base">
                       Shop No. 49A, Ground Floor,<br />
                       Pooja Enclave CHS Ltd,<br />
                       Ganesh Nagar, Kandivali West,<br />
@@ -302,11 +302,11 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4">
-                  <Phone size={24} className="mt-1 flex-shrink-0" />
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                  <Phone size={20} className="mt-1 flex-shrink-0 sm:w-6 sm:h-6" />
                   <div>
-                    <h4 className="font-semibold text-lg mb-1">Phone</h4>
-                    <p className="text-blue-100">
+                    <h4 className="font-semibold text-base sm:text-lg mb-1">Phone</h4>
+                    <p className="text-blue-100 text-sm sm:text-base">
                       +91 9619607537<br />
                       +91 7977018742<br />
                       022 4506 6566
