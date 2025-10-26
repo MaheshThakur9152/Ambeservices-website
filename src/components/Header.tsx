@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone } from 'lucide-react';
+import { Menu, X, Mail } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
 
 const Header = () => {
@@ -29,8 +30,8 @@ const Header = () => {
     <header className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-white/80 backdrop-blur-md shadow-lg' : 'bg-white'
     }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="flex justify-between items-center py-6">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="font-serif text-2xl font-bold text-blue-900">
@@ -39,7 +40,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-12">
             <Link
               href="/"
               className="font-sans text-base font-medium text-gray-700 hover:text-blue-600 transition-colors"
@@ -78,11 +79,23 @@ const Header = () => {
             </button>
           </nav>
 
-          {/* Contact Number */}
-          <div className="hidden md:flex items-center space-x-2 text-blue-600">
-            <Phone size={20} />
-            <span className="font-semibold">+91 9876543210</span>
-          </div>
+          {/* WhatsApp Button */}
+          <a
+            href="https://api.whatsapp.com/send/?phone=919619607537&text&type=phone_number&app_absent=0"
+            target="_blank"
+            className="hidden md:flex items-center justify-center bg-green-500 hover:bg-green-600 rounded-full p-2 shadow-md transition-colors"
+          >
+            <FaWhatsapp size={20} className="text-white" />
+          </a>
+
+          {/* Contact Us Button */}
+          <Link
+            href="/contact"
+            className="hidden md:flex items-center space-x-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium transition-colors"
+          >
+            <Mail size={18} />
+            <span>Contact Us</span>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -134,10 +147,13 @@ const Header = () => {
               >
                 Contact
               </button>
-              <div className="flex items-center space-x-2 px-3 py-2 text-blue-600">
-                <Phone size={20} />
-                <span className="font-semibold">+91 9876543210</span>
-              </div>
+              <a
+                href="https://api.whatsapp.com/send/?phone=919619607537&text&type=phone_number&app_absent=0"
+                target="_blank"
+                className="flex items-center justify-center bg-green-500 hover:bg-green-600 rounded-full p-2 shadow-md mx-3 my-2 transition-colors"
+              >
+                <FaWhatsapp size={20} className="text-white" />
+              </a>
             </div>
           </div>
         )}
