@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { Mail, Building2, Phone, Send } from 'lucide-react';
-import Image from 'next/image';
 
 interface FormData {
   fullName: string;
@@ -103,22 +102,15 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[400px] flex items-center justify-center">
-        <div className="absolute inset-0">
-          <Image
-            src="/hero-1.jpg"
-            alt="Contact Us"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/50"></div>
-        </div>
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl md:text-2xl max-w-2xl mx-auto">
-            Professional Facility Management Solutions
-          </p>
+      <section className="relative min-h-[500px] bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/header.jpg')" }}>
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="relative z-10 flex items-center justify-center text-center text-white px-4">
+          <div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-4">Contact Us</h1>
+            <p className="text-xl md:text-2xl max-w-2xl mx-auto">
+              Professional Facility Management Solutions
+            </p>
+          </div>
         </div>
       </section>
 
