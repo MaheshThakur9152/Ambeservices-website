@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X, Mail } from 'lucide-react';
-import { FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link';
 
 const Header = () => {
@@ -79,15 +78,6 @@ const Header = () => {
             </Link>
           </nav>
 
-          {/* WhatsApp Button */}
-          <a
-            href="https://api.whatsapp.com/send/?phone=919619607537&text&type=phone_number&app_absent=0"
-            target="_blank"
-            className="hidden md:flex items-center justify-center bg-green-500 hover:bg-green-600 rounded-full p-2 shadow-md transition-colors"
-          >
-            <FaWhatsapp size={20} className="text-white" />
-          </a>
-
           {/* Contact Us Button */}
           <Link
             href="/contact"
@@ -106,55 +96,87 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Menu Backdrop */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-              <button
-                onClick={() => scrollToSection('home')}
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 w-full text-left"
-              >
-                Home
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 w-full text-left"
-              >
-                Services
-              </button>
-              <button
-                onClick={() => scrollToSection('why-ambe-service')}
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 w-full text-left"
-              >
-                Why Us
-              </button>
-              <Link
-                href="/about"
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 w-full text-left"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About
-              </Link>
-              <button
-                onClick={() => scrollToSection('testimonials')}
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 w-full text-left"
-              >
-                Testimonials
-              </button>
-              <Link
-                href="/contact"
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 w-full text-left"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contact
-              </Link>
-              <a
-                href="https://api.whatsapp.com/send/?phone=919619607537&text&type=phone_number&app_absent=0"
-                target="_blank"
-                className="flex items-center justify-center bg-green-500 hover:bg-green-600 rounded-full p-2 shadow-md mx-3 my-2 transition-colors"
-              >
-                <FaWhatsapp size={20} className="text-white" />
-              </a>
+          <div
+            className="md:hidden"
+            style={{
+              backgroundColor: 'rgba(0, 0, 0, 0.5)',
+              position: 'fixed',
+              inset: 0,
+              zIndex: 40
+            }}
+            onClick={() => setIsMenuOpen(false)}
+          />
+        )}
+
+        {/* Mobile Menu Sidebar */}
+        {isMenuOpen && (
+          <div
+            className="md:hidden"
+            style={{
+              backgroundColor: '#FFFFFF',
+              opacity: 1,
+              position: 'fixed',
+              right: 0,
+              top: 0,
+              height: '100vh',
+              width: '18rem',
+              zIndex: 50,
+              boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+              overflowY: 'auto'
+            }}
+          >
+            {/* Close Button */}
+            <button
+              className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <X size={24} />
+            </button>
+
+            {/* Menu Content */}
+            <div className="pt-16 px-6">
+              <nav className="space-y-4">
+                <button
+                  onClick={() => scrollToSection('home')}
+                  className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                >
+                  Home
+                </button>
+                <button
+                  onClick={() => scrollToSection('services')}
+                  className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                >
+                  Services
+                </button>
+                <button
+                  onClick={() => scrollToSection('why-ambe-service')}
+                  className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                >
+                  Why Us
+                </button>
+                <Link
+                  href="/about"
+                  className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About
+                </Link>
+                <button
+                  onClick={() => scrollToSection('testimonials')}
+                  className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                >
+                  Testimonials
+                </button>
+                <Link
+                  href="/contact"
+                  className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Contact
+                </Link>
+              </nav>
             </div>
           </div>
         )}

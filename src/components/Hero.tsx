@@ -23,7 +23,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative w-full min-h-[80vh] overflow-hidden">
+    <section id="home" className="relative w-full h-[300px] md:h-[450px] overflow-hidden">
       {/* Auto-rotating Background Images */}
       {images.map((image, index) => (
         <div
@@ -48,8 +48,8 @@ const Hero = () => {
         </div>
       ))}
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/50 z-5"></div>
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30 z-5"></div>
 
       {/* Content - Bottom left aligned */}
       <div className="absolute inset-0 z-10 flex items-end pb-12">

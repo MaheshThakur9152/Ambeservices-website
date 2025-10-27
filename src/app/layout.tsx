@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Lora, Inter } from "next/font/google";
 import "./globals.css";
+import WhatsAppFixed from "../components/WhatsAppFixed";
 
 const lora = Lora({
   subsets: ['latin'],
@@ -166,6 +167,7 @@ export default function RootLayout({
         className={`${lora.variable} ${inter.variable} font-sans antialiased`}
       >
         {children}
+        <WhatsAppFixed />
       </body>
     </html>
   );

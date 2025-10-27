@@ -334,7 +334,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Founded with a Vision</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">About Our Company</h3>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
                   Ambe Service Facilities was established with a clear mission: to revolutionize facility management in Mumbai and Maharashtra by combining skilled professionals with modern operational standards.
@@ -343,7 +343,7 @@ export default function AboutPage() {
                   Starting as a small housekeeping service provider, we quickly recognized the need for comprehensive facility management solutions that go beyond basic cleaning services.
                 </p>
                 <p>
-                  Today, we serve over 100 properties across Mumbai, from residential societies to corporate offices, delivering end-to-end facility management services with excellence and reliability.
+                  Today, we serve over 10 properties across Mumbai, from residential societies to corporate offices, delivering end-to-end facility management services with excellence and reliability.
                 </p>
               </div>
             </motion.div>
@@ -360,7 +360,7 @@ export default function AboutPage() {
                   <div className="flex items-start space-x-3">
                     <div className="w-3 h-3 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
-                      <h5 className="font-semibold text-gray-900">2018</h5>
+                      <h5 className="font-semibold text-gray-900">2016</h5>
                       <p className="text-gray-600">Founded Ambe Service Facilities in Mumbai</p>
                     </div>
                   </div>
@@ -375,7 +375,7 @@ export default function AboutPage() {
                     <div className="w-3 h-3 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
                       <h5 className="font-semibold text-gray-900">2022</h5>
-                      <p className="text-gray-600">Reached 100+ properties serviced milestone</p>
+                      <p className="text-gray-600">Reached 10+ properties serviced milestone</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -470,72 +470,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-              Our Impact
-            </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Numbers that reflect our commitment to excellence in facility management.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-4xl md:text-5xl font-bold mb-2">150+</div>
-              <div className="text-blue-100">Trained Staff</div>
-            </motion.div>
-
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-4xl md:text-5xl font-bold mb-2">100+</div>
-              <div className="text-blue-100">Properties Serviced</div>
-            </motion.div>
-
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-4xl md:text-5xl font-bold mb-2">98%</div>
-              <div className="text-blue-100">Client Satisfaction</div>
-            </motion.div>
-
-            <motion.div
-              className="text-center"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div className="text-4xl md:text-5xl font-bold mb-2">5+</div>
-              <div className="text-blue-100">Years of Excellence</div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* Founder Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -550,7 +484,7 @@ export default function AboutPage() {
             >
               <h3 className="text-3xl font-bold mb-6">From Our Founder</h3>
               <p className="text-lg leading-relaxed mb-8">
-                "At Ambe Service Facilities, we believe that exceptional facility management is built on trust, professionalism, and genuine care for our clients' properties. Our journey started with a simple vision: to provide Mumbai and Maharashtra with facility management services that exceed expectations. Today, we're proud to serve over 100 properties with our team of 150+ trained professionals, delivering quality services that make a real difference in how people live and work."
+                "At Ambe Service Facilities, we believe that exceptional facility management is built on trust, professionalism, and genuine care for our clients' properties. Our journey started with a simple vision: to provide Mumbai and Maharashtra with facility management services that exceed expectations. Today, we're proud to serve over 10 properties with our team of 150+ trained professionals, delivering quality services that make a real difference in how people live and work."
               </p>
               <div>
                 <h4 className="text-2xl font-bold">Harishankar Thakur</h4>
@@ -573,7 +507,7 @@ export default function AboutPage() {
                     alt="Harishankar Thakur - Founder"
                     width={600}
                     height={600}
-                    className="object-cover object-top rounded-xl w-full h-full"
+                    className="object-cover object-top rounded-xl w-full h-full grayscale transition-all duration-300"
                     quality={90}
                   />
                 </div>
