@@ -27,7 +27,7 @@ const Services = () => {
       icon: Sparkles,
       title: "Housekeeping",
       description: "Immerse yourself in cleanliness with our Housekeeping Solutions. Our dedicated team ensures that your spaces are not just clean but meticulously cared for.",
-      image: "/services/housekeeping.jpg"
+      image: "/services/Gallery-1.jpg"
     },
     {
       icon: Bug,

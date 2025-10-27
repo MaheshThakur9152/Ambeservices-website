@@ -13,7 +13,7 @@ export default function LogoCarousel() {
     { name: 'Lokhandwala', logo: '/logos/lokhandwala-kataria-construction-18236-4700.avif', width: 120, height: 60 },
     { name: 'Minerva', logo: '/logos/Minerva.png', width: 100, height: 50 },
     { name: 'Piramal', logo: '/logos/piramal-realty-logo-png_seeklogo-613311.png', width: 130, height: 65 },
-    { name: 'Anjay Puri', logo: '/logos/Sanjay-Puri-5.jpg', width: 130, height: 65 },
+    { name: 'Sanjay Puri', logo: '/logos/Sanjay-Puri-5.jpg', width: 130, height: 65 },
     { name: 'Shapoorji', logo: '/logos/Shapoorji_Pallonji_Group_logo.svg.png', width: 140, height: 70 },
   ];
 
@@ -48,7 +48,7 @@ export default function LogoCarousel() {
           100% { transform: translateX(-50%); }
         }
         .animate-scroll-fast {
-          animation: scrollFast 15s linear infinite;
+          animation: scrollFast 5s linear infinite;
         }
       `}</style>
     </section>

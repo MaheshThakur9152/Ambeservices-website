@@ -45,11 +45,11 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Banner */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            About Ambe Service Facilities
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+            About Us
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Your trusted partner for professional facility management and comprehensive property services across India
+          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            A trusted facility management partner providing comprehensive property maintenance and operational solutions. At Ambe Service Facilities, we believe facility management goes beyond cleaning - it's about skilled professionals, reliable systems, and attention to detail that keep properties running smoothly. With 150+ trained staff members and a proven track record across Mumbai, we deliver quality housekeeping, property management, and technical maintenance services to meet every client's unique needs.
           </p>
         </div>
 
