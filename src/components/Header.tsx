@@ -57,7 +57,13 @@ const Header = () => {
               Services
             </Link>
             <button
-              onClick={() => scrollToSection('why-ambe-service')}
+              onClick={() => {
+                if (pathname === '/') {
+                  scrollToSection('why-ambe-service');
+                } else {
+                  window.location.href = '/#why-ambe-service';
+                }
+              }}
               className="font-sans text-base font-medium text-gray-700 hover:text-blue-600 transition-colors"
             >
               Why Us
@@ -68,12 +74,12 @@ const Header = () => {
             >
               About
             </Link>
-            <Link
+            {/* <Link
               href="/contact"
               className="font-sans text-base font-medium text-gray-700 hover:text-blue-600 transition-colors"
             >
               Contact
-            </Link>
+            </Link> */}
           </nav>
 
           {/* Contact Us Button */}
@@ -137,7 +143,13 @@ const Header = () => {
             <div className="pt-16 px-6">
               <nav className="space-y-4">
                 <button
-                  onClick={() => scrollToSection('home')}
+                  onClick={() => {
+                    if (pathname === '/') {
+                      scrollToSection('home');
+                    } else {
+                      window.location.href = '/';
+                    }
+                  }}
                   className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
                 >
                   Home
@@ -152,7 +164,13 @@ const Header = () => {
                   Services
                 </Link>
                 <button
-                  onClick={() => scrollToSection('why-ambe-service')}
+                  onClick={() => {
+                    if (pathname === '/') {
+                      scrollToSection('why-ambe-service');
+                    } else {
+                      window.location.href = '/#why-ambe-service';
+                    }
+                  }}
                   className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
                 >
                   Why Us
@@ -165,7 +183,13 @@ const Header = () => {
                   About
                 </Link>
                 <button
-                  onClick={() => scrollToSection('testimonials')}
+                  onClick={() => {
+                    if (pathname === '/') {
+                      scrollToSection('testimonials');
+                    } else {
+                      window.location.href = '/#testimonials';
+                    }
+                  }}
                   className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
                 >
                   Testimonials

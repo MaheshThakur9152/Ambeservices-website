@@ -62,13 +62,13 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             >
               <Link href="#services">
-                <motion.text 
+                <motion.button 
                   className="bg-white text-black px-8 py-3 rounded-full font-sans font-medium hover:bg-gray-100 transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Facility Management
-                </motion.text>
+                </motion.button>
               </Link>
             </motion.div>
           </div>

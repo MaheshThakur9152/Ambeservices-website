@@ -229,7 +229,7 @@ const Footer = () => {
             <div className="flex space-x-6 text-sm text-gray-300">
               <a href="#" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-blue-400 transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-blue-400 transition-colors">Sitemap</a>
+              <a href="/sitemap.xml" className="hover:text-blue-400 transition-colors">Sitemap</a>
             </div>
           </div>
         </div>
