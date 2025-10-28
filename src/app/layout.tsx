@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://ambeservice.com'),
   title: "Ambe Service Facilities Pvt Ltd - Professional Home & Business Services",
   description: "Fast, reliable & affordable home and business services including plumbing, electrical, AC repair, deep cleaning, pest control, and handyman services across India. 24/7 emergency support available.",
   keywords: "home services, plumbing, electrical, AC repair, cleaning, pest control, handyman, facility management, Mumbai, India",
