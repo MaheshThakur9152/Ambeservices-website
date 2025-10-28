@@ -343,12 +343,7 @@ const Contact = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">Find Us</h2>
           <div className="w-full">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.123!2d72.837!3d19.207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDEyJzI1LjIiTiA3MsKwNTAnMTMuMiJF!5e0!3m2!1sen!2sin!4v1234567890"
-              className="w-full h-96 rounded-lg shadow-md"
-              allowFullScreen
-              loading="lazy"
-            ></iframe>
+            <iframe className="w-full h-96 rounded-lg shadow-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.48877679958883!2d72.82788658872929!3d19.203043964219066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6c762b62d5f%3A0xa8f4d1241137dec!2sHaseen%20Khan%20%26%20Co.!5e0!3m2!1sen!2sin!4v1761646519125!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>
