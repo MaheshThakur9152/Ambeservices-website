@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Mail, Building2, Phone, Send } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { motion } from 'framer-motion';
 
 interface FormData {
   fullName: string;
@@ -106,29 +107,34 @@ const Contact = () => {
     <div className="min-h-screen">
       <Header />
       {/* Hero Section */}
-      <section className="relative h-[400px] md:h-[500px] w-full">
-        {/* Background image */}
-        <Image
-          src="/header.jpg"
-          alt="Contact Hero"
-          fill
-          className="object-cover"
-          priority
-        />
-
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/40"></div>
-
-        {/* Content - Properly spaced */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4">
-            Contact Us
-          </h1>
-          <p className="text-xl md:text-2xl max-w-2xl text-center">
-            Professional Facility Management Solutions
-          </p>
+      <motion.section 
+        className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden"
+        initial={{ opacity: 0, y: -50, scale: 0.95 }}
+        whileInView={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        viewport={{ once: true }}
+        style={{ willChange: 'transform' }}
+      >
+        {/* Hero Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/header.jpg"
+            fill={true}
+            priority={true}
+            alt="About Us Background"
+            className="object-cover"
+            sizes="100vw"
+          />
         </div>
-      </section>
+
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/60"></div>
+
+        {/* Content */}
+        <div className="relative z-10 text-center text-white">
+          <h1 className="text-5xl md:text-6xl font-bold">Contact Us</h1>
+        </div>
+      </motion.section>
 
       {/* Contact Section */}
       <section className="py-20 bg-gray-50">

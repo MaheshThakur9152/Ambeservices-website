@@ -32,11 +32,11 @@ const Header = () => {
       isScrolled ? 'bg-white/80 backdrop-blur-md shadow-lg' : 'bg-white'
     }`}>
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="flex justify-between items-center py-6">
+        <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="font-serif text-2xl font-bold text-blue-900">
-              Ambe Service Facilities
+            <Link href="/" className="pl-0 font-serif text-2xl font-bold text-blue-900">
+              Ambe Service Facilities Pvt Ltd
             </Link>
           </div>
 
@@ -68,12 +68,6 @@ const Header = () => {
             >
               About
             </Link>
-            <button
-              onClick={() => scrollToSection('testimonials')}
-              className="font-sans text-base font-medium text-gray-700 hover:text-blue-600 transition-colors"
-            >
-              Testimonials
-            </button>
             <Link
               href="/contact"
               className="font-sans text-base font-medium text-gray-700 hover:text-blue-600 transition-colors"
