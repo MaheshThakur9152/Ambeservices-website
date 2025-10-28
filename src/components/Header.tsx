@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Mail } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,12 +48,14 @@ const Header = () => {
             >
               Home
             </Link>
-            <button
-              onClick={() => scrollToSection('services')}
-              className="font-sans text-base font-medium text-gray-700 hover:text-blue-600 transition-colors"
+            <Link
+              href="/services"
+              className={`font-sans text-base font-medium transition-colors ${
+                pathname === '/services' ? 'text-blue-600' : 'text-gray-700 hover:text-blue-600'
+              }`}
             >
               Services
-            </button>
+            </Link>
             <button
               onClick={() => scrollToSection('why-ambe-service')}
               className="font-sans text-base font-medium text-gray-700 hover:text-blue-600 transition-colors"
@@ -144,12 +148,15 @@ const Header = () => {
                 >
                   Home
                 </button>
-                <button
-                  onClick={() => scrollToSection('services')}
-                  className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+                <Link
+                  href="/services"
+                  className={`block w-full text-left py-3 px-4 rounded-lg transition-colors ${
+                    pathname === '/services' ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Services
-                </button>
+                </Link>
                 <button
                   onClick={() => scrollToSection('why-ambe-service')}
                   className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"

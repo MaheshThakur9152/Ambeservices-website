@@ -78,8 +78,9 @@ export default function AboutPage() {
         className="relative w-full h-[40vh] flex items-center justify-center overflow-hidden"
         initial={{ opacity: 0, y: -50, scale: 0.95 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
         viewport={{ once: true }}
+        style={{ willChange: 'transform' }}
       >
         {/* Hero Image */}
         <div className="absolute inset-0">
@@ -89,6 +90,7 @@ export default function AboutPage() {
             priority={true}
             alt="About Us Background"
             className="object-cover"
+            sizes="100vw"
           />
         </div>
 
@@ -109,8 +111,9 @@ export default function AboutPage() {
               className="text-xl text-gray-700 leading-relaxed max-w-5xl mx-auto"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               viewport={{ once: true }}
+              style={{ willChange: 'opacity' }}
             >
               A trusted facility management partner providing comprehensive property maintenance solutions across Mumbai and Maharashtra. At Ambe Service Facilities, we believe facility management is more than just cleaning - it's about skilled professionals, reliable systems, and exceptional service that keep your properties running smoothly. With 150+ trained staff members and a proven track record serving residential societies, commercial complexes, and corporate offices, we deliver quality housekeeping, pest control, property management, and technical maintenance services tailored to meet every client's unique needs.
             </motion.p>
@@ -126,8 +129,9 @@ export default function AboutPage() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             viewport={{ once: true }}
+            style={{ willChange: 'transform' }}
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
               Our Values
@@ -173,8 +177,9 @@ export default function AboutPage() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             viewport={{ once: true }}
+            style={{ willChange: 'transform' }}
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
               What We Do
@@ -191,8 +196,10 @@ export default function AboutPage() {
                 className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
+                whileTap={{ scale: 0.95 }}
+                style={{ willChange: 'transform' }}
               >
                 <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-4">
                   {service.icon}
@@ -216,8 +223,9 @@ export default function AboutPage() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             viewport={{ once: true }}
+            style={{ willChange: 'transform' }}
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Us
@@ -232,8 +240,9 @@ export default function AboutPage() {
               className="bg-blue-50 rounded-xl p-8 border border-blue-100"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
+              style={{ willChange: 'transform' }}
             >
               <h3 className="text-2xl font-bold text-blue-600 mb-4">Trained Professionals</h3>
               <p className="text-gray-700 leading-relaxed">
@@ -316,8 +325,9 @@ export default function AboutPage() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             viewport={{ once: true }}
+            style={{ willChange: 'transform' }}
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
               Our Journey
@@ -399,8 +409,9 @@ export default function AboutPage() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             viewport={{ once: true }}
+            style={{ willChange: 'transform' }}
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
               Our Commitment to Excellence
@@ -509,6 +520,7 @@ export default function AboutPage() {
                     height={600}
                     className="object-cover object-top rounded-xl w-full h-full grayscale transition-all duration-300"
                     quality={90}
+                    sizes="(max-width: 1024px) 100vw, 58vw"
                   />
                 </div>
               </div>
