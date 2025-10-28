@@ -39,7 +39,7 @@ const Services = () => {
       icon: Waves,
       title: "Tank Cleaning",
       description: "Ensure the purity and safety of your water supply. Our thorough cleaning and disinfection processes adhere to stringent standards, promoting safety and well-being.",
-      image: "/services/tank-cleaning.jpg"
+      image: "/services/Blog-TankCleaning_HeaderImage.jpg"
     },
     {
       icon: Coffee,

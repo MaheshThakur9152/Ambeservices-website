@@ -17,7 +17,7 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
+
           {/* Company Info */}
           <div>
             <h3 className="font-serif text-xl font-bold text-white mb-6">
@@ -34,17 +34,29 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-blue-400" />
+                <a href="tel:+9197977018742" className="text-gray-300 hover:text-white transition-colors">
+                  +91 7977018742
+                </a>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-blue-400" />
+                <a href="tel:+02245066566" className="text-gray-300 hover:text-white transition-colors">
+                  +022 4506 6566
+                </a>
+              </div>
+            </div>
+              <div className="flex items-center gap-3 pt-3">
                 <Mail className="w-5 h-5 text-blue-400" />
                 <a href="mailto:contact@ambeservice.com" className="text-gray-300 hover:text-white transition-colors">
                   contact@ambeservice.com
                 </a>
               </div>
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3 pt-3">
                 <MapPin className="w-5 h-5 text-blue-400 mt-1" />
                 <span className="text-gray-300">Mumbai, Maharashtra</span>
               </div>
             </div>
-          </div>
 
           {/* Quick Links */}
           <div>
