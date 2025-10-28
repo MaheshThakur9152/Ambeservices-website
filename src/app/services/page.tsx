@@ -158,7 +158,7 @@ export default function ServicesPage() {
                     {service.description}
                   </p>
                   <Link
-                    href={`/services/${service.slug}`}
+                    href='/contact'
                     className="inline-flex items-center px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors text-sm"
                   >
                     Learn More
