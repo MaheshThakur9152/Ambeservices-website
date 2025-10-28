@@ -328,7 +328,7 @@ const Contact = () => {
                     <p className="text-blue-100 text-sm sm:text-base">
                       +91 9619607537<br />
                       +91 7977018742<br />
-                      022 4506 6566
+                      +022 4506 6566
                     </p>
                   </div>
                 </div>
