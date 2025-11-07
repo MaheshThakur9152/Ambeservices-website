@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Statistics() {
   const stats = [
@@ -9,6 +10,40 @@ export default function Statistics() {
     { number: "100+", label: "Properties Serviced" },
     { number: "50+", label: "Service Locations" }
   ];
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isInView, setIsInView] = useState(false);
+  const [hasPlayed, setHasPlayed] = useState(false);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasPlayed) {
+            setIsInView(true);
+            setHasPlayed(true);
+            // Start playing when in view
+            video.play().catch((error) => {
+              console.warn('Video autoplay failed:', error);
+            });
+          }
+        });
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of video is visible
+        rootMargin: '50px' // Start loading 50px before entering viewport
+      }
+    );
+
+    observer.observe(video);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [hasPlayed]);
 
   return (
     <section className="py-20 md:py-28 bg-white">
@@ -25,12 +60,14 @@ export default function Statistics() {
           >
             <div className="h-48 sm:h-64 md:h-80 lg:aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl bg-black">
               <video
-                autoPlay
+                ref={videoRef}
                 loop
                 muted
                 playsInline
+                preload={isInView ? "metadata" : "none"}
                 className="w-full h-full object-cover"
                 poster="/hero-1.jpg"
+                onError={(e) => console.error('Video failed to load:', e)}
               >
                 <source src="/ambe-service-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.

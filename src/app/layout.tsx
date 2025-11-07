@@ -165,6 +165,7 @@ export default function RootLayout({
       </head>
       <body
         className={`${lora.variable} ${inter.variable} font-sans antialiased`}
+        suppressHydrationWarning={true}
       >
         {children}
         <WhatsAppFixed />
