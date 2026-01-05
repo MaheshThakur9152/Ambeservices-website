@@ -7,12 +7,12 @@ import Link from 'next/link';
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const images = ['/hero-1.jpg', '/hero-3.jpg'];
+  const images = ['https://res.cloudinary.com/di9eeahdy/image/upload/v1767581872/hero-1_l5ssox.webp', 'https://res.cloudinary.com/di9eeahdy/image/upload/v1767582049/hero-3_mygbyt.webp'];
   
   // Individual positioning for each image to show team members properly
   const imagePositions: { [key: string]: string } = {
-    '/hero-1.jpg': 'center 25%', // Works fine, keep as is
-    '/hero-3.jpg': 'center 35%', // Adjust for Photo-3
+    'https://res.cloudinary.com/di9eeahdy/image/upload/v1767581872/hero-1_l5ssox.webp': 'center 25%', // Works fine, keep as is
+    'https://res.cloudinary.com/di9eeahdy/image/upload/v1767582049/hero-3_mygbyt.webp': 'center 35%', // Adjust for Photo-3
   };
 
   useEffect(() => {

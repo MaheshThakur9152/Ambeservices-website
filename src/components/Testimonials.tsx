@@ -103,7 +103,7 @@ export default function Testimonials() {
           {/* Right: Handshake Image with Reviews Badge */}
           <div className="relative">
             <Image
-              src="/handshake.jpg"
+              src="https://res.cloudinary.com/di9eeahdy/image/upload/v1767582755/handshake_m5v6dh.webp"
               alt="Customer testimonial"
               width={600}
               height={600}

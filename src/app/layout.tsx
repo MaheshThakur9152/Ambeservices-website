@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     description: 'Fast, reliable & affordable home and business services including plumbing, electrical, AC repair, deep cleaning, pest control, and handyman services across India.',
     images: [
       {
-        url: '/Image.use.jpg',
+        url: 'https://res.cloudinary.com/di9eeahdy/image/upload/f_auto,q_auto,w_1200,h_630,c_fill/v1767581872/hero-1_l5ssox.webp',
         width: 1200,
         height: 630,
         alt: 'Ambe Service Facilities - Professional Home & Business Services',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Professional Home & Business Services - Ambe Service Facilities',
     description: 'Fast, reliable & affordable home and business services across India. 24/7 emergency support available.',
-    images: ['/Image.use.jpg'],
+    images: ['https://res.cloudinary.com/di9eeahdy/image/upload/f_auto,q_auto,w_1200,h_630,c_fill/v1767581872/hero-1_l5ssox.webp'],
   },
   verification: {
     google: 'your-google-verification-code',

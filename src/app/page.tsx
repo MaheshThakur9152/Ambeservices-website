@@ -1,27 +1,17 @@
-"use client";
+import dynamic from 'next/dynamic';
 
-import { useEffect } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
-import Statistics from '../components/Statistics';
+const Statistics = dynamic(() => import('../components/Statistics'), { loading: () => <div /> });
+const OurPeople = dynamic(() => import('../components/OurPeople'), { loading: () => <div /> });
+const Testimonials = dynamic(() => import('../components/Testimonials'), { loading: () => <div /> });
 import WhyAmbeService from '../components/WhyAmbeService';
 import TrustedBySection from '../components/TrustedBySection';
-import OurPeople from '../components/OurPeople';
 import Services from '../components/Services';
-import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 export default function Home() {
-  useEffect(() => {
-    // Enable smooth scrolling for the entire document
-    document.documentElement.style.scrollBehavior = 'smooth';
-    
-    return () => {
-      document.documentElement.style.scrollBehavior = 'auto';
-    };
-  }, []);
-
   return (
     <div className="min-h-screen">
       {/* Navigation Header */}
