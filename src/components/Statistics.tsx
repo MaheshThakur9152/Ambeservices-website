@@ -14,10 +14,13 @@ export default function Statistics() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isInView, setIsInView] = useState(false);
   const [hasPlayed, setHasPlayed] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
+
+    const onPlaying = () => setIsPlaying(true);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -25,7 +28,13 @@ export default function Statistics() {
           if (entry.isIntersecting && !hasPlayed) {
             setIsInView(true);
             setHasPlayed(true);
-            // Start playing when in view
+            // Ensure the browser starts fetching and play when possible
+            try {
+              // Instruct the browser to load resources sooner
+              video.load();
+            } catch (e) {
+              /* ignore */
+            }
             video.play().catch((error) => {
               console.warn('Video autoplay failed:', error);
             });
@@ -33,15 +42,17 @@ export default function Statistics() {
         });
       },
       {
-        threshold: 0.1, // Trigger when 10% of video is visible
-        rootMargin: '50px' // Start loading 50px before entering viewport
+        threshold: 0.0, // Trigger immediately when any part is visible
+        rootMargin: '200px' // Start loading well before entering viewport
       }
     );
 
+    video.addEventListener('playing', onPlaying);
     observer.observe(video);
 
     return () => {
       observer.disconnect();
+      video.removeEventListener('playing', onPlaying);
     };
   }, [hasPlayed]);
 
@@ -64,8 +75,10 @@ export default function Statistics() {
                 loop
                 muted
                 playsInline
-                preload={isInView ? "metadata" : "none"}
-                className="w-full h-full object-cover"
+                // preload more aggressively so the first frame is available quickly
+                preload={isInView ? "auto" : "metadata"}
+                className="w-full h-full object-cover transition-opacity duration-500"
+                style={{ opacity: isPlaying ? 1 : 0 }}
                 poster="https://res.cloudinary.com/di9eeahdy/image/upload/f_auto,q_auto,w_1600/v1767581872/hero-1_l5ssox.webp"
                 onError={(e) => console.error('Video failed to load:', e)}
               >
