@@ -15,6 +15,7 @@ export default function Statistics() {
   const [isInView, setIsInView] = useState(false);
   const [hasPlayed, setHasPlayed] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasVideoError, setHasVideoError] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -78,11 +79,11 @@ export default function Statistics() {
                 // preload more aggressively so the first frame is available quickly
                 preload={isInView ? "auto" : "metadata"}
                 className="w-full h-full object-cover transition-opacity duration-500"
-                style={{ opacity: isPlaying ? 1 : 0 }}
+                style={{ opacity: isPlaying || hasVideoError ? 1 : 0 }}
                 poster="https://res.cloudinary.com/di9eeahdy/image/upload/f_auto,q_auto,w_1600/v1767581872/hero-1_l5ssox.webp"
-                onError={(e) => console.error('Video failed to load:', e)}
+                onError={() => setHasVideoError(true)}
               >
-                <source src="https://res.cloudinary.com/di9eeahdy/video/upload/f_auto,q_auto,w_1280/v1767580923/ambe-service-video_lx4faz.webm" type="video/webm" />
+                  <source src="/ambe-service-video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
