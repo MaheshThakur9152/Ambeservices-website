@@ -23,7 +23,7 @@ export default function Testimonials() {
       review: 'Outstanding facility management services! Their comprehensive approach to property maintenance has streamlined our operations significantly. The 24/7 support and trained staff make them invaluable.'
     },
     {
-      name: 'Vikram Pille',
+      name: 'Vikram Pillai',
       company: 'Minerva',
       position: 'Engineer',
       rating: 4.2,
