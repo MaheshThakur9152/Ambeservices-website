@@ -83,7 +83,7 @@ export default function Statistics() {
                 poster="https://res.cloudinary.com/di9eeahdy/image/upload/f_auto,q_auto,w_1600/v1767581872/hero-1_l5ssox.webp"
                 onError={() => setHasVideoError(true)}
               >
-                  <source src="/ambe-service-video.mp4" type="video/mp4" />
+                <source src="https://res.cloudinary.com/di9eeahdy/video/upload/f_auto,q_auto,w_1280/v1767580923/ambe-service-video_lx4faz.webm" type="video/webm" />
                 Your browser does not support the video tag.
               </video>
             </div>
