@@ -1,7 +1,5 @@
 {
   "functions": {
-    "api/**/*": {
-      "nodeVersion": "20.x"
-    }
+    "api/**/*": {}
   }
 }
