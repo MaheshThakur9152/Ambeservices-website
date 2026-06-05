@@ -25,7 +25,7 @@ export default function Testimonials() {
     {
       name: 'Vikram Pillai',
       company: 'Minerva',
-      position: 'Engineer',
+      position: 'Project VP',
       rating: 4.2,
       review: 'We\'ve been working with Ambe Service for over a year now, and their attention to detail is remarkable. From lift operations to pest control, every service is delivered with precision and care.'
     },
